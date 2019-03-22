@@ -1,10 +1,10 @@
 language: cpp
 compiler: clang
 before_script:
-- sudo apt install libboost-test-dev -y
+- sudo apt-get install libboost-test-dev -y
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list.d/xenial.list
-- sudo apt update
-- sudo apt install libspdlog-dev -y
+- sudo apt-get update
+- sudo apt-get install libspdlog-dev -y
 script:
 - cmake .
 - cmake --build .
@@ -14,4 +14,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - curl -T helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ushebdim:$BINTRAY_API_KEY "https://api.bintray.com/content/shebdim/otus-cpp/homework/$TRAVIS_BUILD_NUMBER/helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  - curl -T helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -umuksunoved:$BINTRAY_API_KEY "https://api.bintray.com/content/muksunove-otus-helloworld/muksunoved-otus-helloworld/$TRAVIS_BUILD_NUMBER/helloworld-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
