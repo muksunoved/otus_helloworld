@@ -8,7 +8,7 @@ configure_file(version.h.in ${PROJECT_SOURCE_DIR}/version.h)
 
 add_executable(helloworld main.cpp)
 
-add_library(helloworld lib.cpp)
+add_library(helloworld_cli lib.cpp)
 
 add_executable(test_version test_version.cpp)
 
@@ -23,7 +23,7 @@ set_target_properties(test_version PROPERTIES
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
 
-target_link_libraries(helloworld
+target_link_libraries(helloworld_cli
     -lpthread
     helloworld
 )
