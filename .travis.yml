@@ -3,7 +3,7 @@ compiler: clang
 dist: xenial
 addons :
   apt :
-     sources :
+     packages :
          - libboost-test-dev
 script:
 - cmake .
