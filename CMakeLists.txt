@@ -24,12 +24,11 @@ set_target_properties(test_version PROPERTIES
 )
 
 target_link_libraries(helloworld
-    -lpthread
+    Threads::Threads
     helloworld_cli
 )
 
 target_link_libraries(test_version
-    -lpthread
     ${Boost_LIBRARIES}
     helloworld_cli
 )
