@@ -24,8 +24,8 @@ set_target_properties(test_version PROPERTIES
 )
 
 target_link_libraries(helloworld
-    Threads::Threads
     helloworld_cli
+    Threads::Threads
 )
 
 target_link_libraries(test_version
