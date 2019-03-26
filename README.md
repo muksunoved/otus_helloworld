@@ -1,16 +1,37 @@
-## Project
+# Helloworld simple project
 
-helloworld simple project
+## Download and install
 
-## Download 
+### Add repository
 
-After build and download from build instance https://dl.bintray.com/muksunoved/muksunoved-otus-helloworld/:helloworld-0.0.<version>-Linux.deb
+``
+echo "deb https://dl.bintray.com/muksunoved/otus-packages xenial main" | sudo tee -a /etc/apt/sources.list
+``
 
-## Install
+###  Add repository sign key
 
-sudo dpkg -i helloworld-0.0.<version>-Linux.deb
+``
+sudo apt-key adv --keyserver https://bintray.com/user/downloadSubjectPublicKey?username=muksunoved --recv-keys 7FBC7A6BDBF3D0EB
+``
 
-## Uninstall 
+### Install
 
-sudo dpkg -r helloworld
+``
+sudo apt update
+sudo install helloworld
+``
+
+## Update new version
+
+``
+sudo apt update
+sudo apt upgrade
+``
+
+## Remove
+
+``
+sudo apt remove helloworld
+``
+
 
