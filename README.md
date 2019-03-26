@@ -18,7 +18,7 @@ sudo apt-key adv --keyserver https://bintray.com/user/downloadSubjectPublicKey?u
 
 ~~~~
 sudo apt update
-sudo get install helloworld
+sudo apt install helloworld
 ~~~~
 
 ## Update new version
