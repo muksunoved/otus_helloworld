@@ -1,11 +1,9 @@
 #include "lib.h"
 
-#include <spdlog/spdlog.h>
-
 int main()
 {
-    auto logger = spdlog::stdout_logger_mt("console");
-    logger->info("\nBuild {}\nHello, World!\n", version());
-
+    helloworld::Version v;
+    std::cout << "build " << v << std::endl;
+    std::cout << "Hello, World!" << std::endl;
     return 0;
 }
