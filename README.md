@@ -4,34 +4,34 @@
 
 ### Add repository
 
-``
+~~~~
 echo "deb https://dl.bintray.com/muksunoved/otus-packages xenial main" | sudo tee -a /etc/apt/sources.list
-``
+~~~~
 
 ###  Add repository sign key
 
-``
+~~~~
 sudo apt-key adv --keyserver https://bintray.com/user/downloadSubjectPublicKey?username=muksunoved --recv-keys 7FBC7A6BDBF3D0EB
-``
+~~~~
 
 ### Install
 
-``
+~~~~
 sudo apt update
 sudo install helloworld
-``
+~~~~
 
 ## Update new version
 
-``
+~~~~
 sudo apt update
 sudo apt upgrade
-``
+~~~~
 
 ## Remove
 
-``
+~~~~
 sudo apt remove helloworld
-``
+~~~~
 
 
